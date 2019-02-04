@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "dependencies": {
     "aphrodite": "^2.2.3",
     "axios": "^0.18.0",
