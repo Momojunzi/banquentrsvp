@@ -1,0 +1,37 @@
+{
+  "name": "banquentrsvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "start": "nodemon server/server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"yarn start\" \"yarn client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Momojunzi/banquentrsvp.git"
+  },
+  "author": "Mark Holthaus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Momojunzi/banquentrsvp/issues"
+  },
+  "homepage": "https://github.com/Momojunzi/banquentrsvp#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3",
+    "nodemon": "^1.11.0",
+    "react-router-dom": "^4.3.1",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}

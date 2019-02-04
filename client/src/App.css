@@ -1,0 +1,96 @@
+@import  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Fascinate+Inline|Poller+One|Roboto:700');
+
+.App {
+  text-align: center;
+  
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.my-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 70vw;
+  height: 71vh;
+  
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-tab {
+  width: 8.4%;
+  height: 100%;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.canvas {
+  width: 79.8%;
+  height: 100%;
+  
+  background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('https://res.cloudinary.com/momojunzi/image/upload/v1548896831/portfolio/rsvp/chris-brignola-392-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+
+}
+
+.invite {
+  background-color: #F8C03F;
+}
+
+.rsvp {
+  background-color: #F6A935;
+}
+
+.directions {
+  background-color: #F58E27;
+}
+
+.largeTextDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

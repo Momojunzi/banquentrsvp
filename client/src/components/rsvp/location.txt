@@ -1,0 +1,153 @@
+[
+    {
+        locationNumber: "0522-10 Golden Gate",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0522-28 Concord Tow World",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0522-57 Bailey's Rentals",
+        attending:false,  
+        guests:0, 
+        comment:''
+    },
+    {
+        locationNumber: "0522-60 Storage Pro: Richmond",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0522-69 Alameda Auto Lab",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0523-10 Hayward",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0523-21 Dublin Security Storage",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0523-27 Fremont Auto Repair",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0523-29 Bay Quality Motors",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0118-10 Santa Clara",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0118-24 Alum Rock Self Storage",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0118-39 JDM Monterey Rd.",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0118-40 JDM Montgomery St.",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0685-10 South San Francisco",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0685-20 Condon Rentals",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0685-37 Hengehold Rentals",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0685-57 Brake Plus",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0692-10 San Francisco Downtown",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0691-10 Santa Rosa",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0691-25 Broccos Barn",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0691-26 Heirloom Storage",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0691-28 Bartenders Unlimited",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0691-31 Boulevard Automotive",
+        attending:false,
+        guests:0,
+        comment:''
+    },{
+        locationNumber: "0655-10 Gilroy",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0655-27 Mini Max Storage",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0655-28 Millers Storge",
+        attending:false,
+        guests:0,
+        comment:''
+    },
+    {
+        locationNumber: "0655-29 Locatelli Moving and Storage",
+        attending:false,
+        guests:0,
+        comment:''
+    }
+]
