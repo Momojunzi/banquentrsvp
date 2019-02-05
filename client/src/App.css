@@ -25,12 +25,8 @@
 }
  
 .side-tab {
-  /* width: 8.4%; */
-  /* height: 100%; */
-  /* height: 71vh; */
   border: solid black 1px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -115,50 +111,36 @@
 
 .largeTextDiv {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
 .inviteTextDiv {
-  width: 44vw;
-  height: 23vh;
-  padding-top: 5%;
-  padding-left: 5%;
+
 }
 .largeTextDiv {
-  width: 90%;
-  height: 7vh;
   display: flex;      
   align-items: center;
   justify-content: left; 
 }
 .smallTextDiv {
-  width: 90%;
-  height: 5vh;
   display: flex;     
   align-items: center;
   justify-content: left; 
-  padding-top: 5%;
-  padding-bottom: 3%;
 }
 .text1 {
   font-family: 'Abril Fatface', cursive;
-  font-size: 2.8vw;
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
 }
 .text2 {
   font-family: 'Abril Fatface', cursive;
-  font-size: 2.4vw;
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
 }
 .eventDiv {
-  width: 75%;
-  height: 45vh;
-  margin: 2% auto 0 auto;
+
 }
 .image {
   width: 100%;
@@ -166,12 +148,9 @@
   
 }
 .imageDiv {
-  width: 95%;
-  height: 33vh;
-  margin: auto;
+
 }
 .imageText {
-  font-size: 2.4vw;
   font-family: 'Abril Fatface', cursive;
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
@@ -181,13 +160,10 @@
 
 /* form style */
 .formStyle {
-  width: 80%;
-  margin: 5% auto 5% auto;
-  
+    
 }
 .labelStyle {
   font-family: 'Abril Fatface', cursive;
-  font-size: 1.75vw;
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
   text-align: left;
@@ -197,7 +173,6 @@
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
   border-bottom: solid #4663C1 1px;
-  padding-bottom: 5%;
 }
 
 /*end form style */
@@ -205,7 +180,6 @@
 /* rsvp style */
 .labelStyle {
   font-family: 'Abril Fatface', cursive;
-  font-size: 1.75vw;
   color: #4663C1;
   text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
   

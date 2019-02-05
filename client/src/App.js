@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css'; 
 import './landscape.css';
+import './portrait.css';
 import Rsvp from './components/rsvp/rsvp';
 import Landing from './components/landing/landing';
 import Invite from './components/invite/invite';

@@ -55,4 +55,77 @@
       }
       /* end landing css */
 
+      /*start of invite css*/
+
+    .largeTextDiv {
+      flex-direction: column;
+    }
+
+    .inviteTextDiv {
+      width: 44vw;
+      height: 23vh;
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+    .largeTextDiv {
+      width: 90%;
+      height: 7vh; 
+    }
+    .smallTextDiv {
+      width: 90%;
+      height: 5vh; 
+      padding-top: 5%;
+      padding-bottom: 3%;
+    }
+    .text1 {
+      font-size: 2.8vw;
+    }
+    .text2 {
+      font-size: 2.4vw;
+    }
+    .eventDiv {
+      width: 75%;
+      height: 45vh;
+      margin: 2% auto 0 auto;
+    }
+    .image {
+      
+    }
+    .imageDiv {
+      width: 95%;
+      height: 33vh;
+      margin: auto;
+    }
+    .imageText {
+      font-size: 2.4vw;
+    }
+
+    /*end invite css */
+
+      /* form style */
+    .formStyle {
+      width: 80%;
+      margin: 5% auto 5% auto;
+      
+    }
+    .labelStyle {
+      font-size: 1.75vw;
+    }
+    .h3Style {
+      padding-bottom: 5%;
+    }
+
+    /*end form style */
+
+    /* rsvp style */
+
+    .labelStyle {
+      font-size: 1.75vw;
+      
+    }
+    .guestsStyle {
+     
+    }
+    /* end rsvp style */
+
 }
