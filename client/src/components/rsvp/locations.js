@@ -97,6 +97,14 @@ const locationData = [
     {
         locationNumber: "0655-29",
         name:'Locatelli Moving and Storage'   
+    },
+    {
+        locationNumber: "Golden Gate District",
+        name:''
+    },
+    {
+        locationNumber: "Hikers",
+        name:''
     }
 ]
 
