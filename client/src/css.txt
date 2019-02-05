@@ -1,0 +1,14 @@
+    .labelStyle {
+        font-family: 'Abril Fatface', cursive;
+        font-size: 1.75vw;
+        color: #4663C1;
+        text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+        
+    }
+    .guestsStyle {
+        border: solid #4663C1 1px;
+        padding: 2vh;
+        width: 100%;
+        margin: auto;
+        background: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60));
+    }

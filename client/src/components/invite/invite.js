@@ -70,21 +70,21 @@ class Invite extends Component {
             <div className='container'>
                 <SideTab  name='invite' text='The Event'/>
                 <div className='canvas'>
-                    <div className={css(styles.inviteTextDiv)}>
-                        <div className={css(styles.largeTextDiv)}>
-                           <p className={css(styles.text1)}>Please join us March 16, 2019</p> 
+                    <div className='inviteTextDiv'>
+                        <div className='largeTextDiv'>
+                           <p className='text1'>Please join us March 16, 2019</p> 
                         </div>
-                        <div className={css(styles.smallTextDiv)}>
-                            <p className={css(styles.text2)}>6:00 pm - 10:00pm</p>
+                        <div className='smallTextDiv'>
+                            <p className='text2'> 6:00 pm - 10:00pm</p>
                         </div>
-                        <div className={css(styles.smallTextDiv)}>
-                            <p className={css(styles.text2)}>At the Crowne Plaza in Union City</p>
+                        <div className='smallTextDiv'>
+                            <p className='text2'>At the Crowne Plaza in Union City</p>
                         </div>
                     </div>
-                    <div className={css(styles.eventDiv)} style={fadeStyle}>
-                        <p className={css(styles.imageText)}>{imageData[this.state.count].text}</p>
-                        <div className={css(styles.imageDiv)}>
-                            <img src={imageData[this.state.count].image} className={css(styles.image)} alt="invite"/>
+                    <div className='eventDiv' style={fadeStyle}>
+                        <p className='imageText'>{imageData[this.state.count].text}</p>
+                        <div className='imageDiv'>
+                            <img src={imageData[this.state.count].image} className='image' alt="invite"/>
                         </div>
                     </div>
                 </div>
@@ -94,62 +94,5 @@ class Invite extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    inviteTextDiv: {
-        paddingTop: '5%',
-        paddingLeft: '5%'
-    },
-    largeTextDiv:{
-        width: '90%',
-        height: '7vh',
-        display: 'flex',      
-        alignItems: 'center',
-        justifyContent: 'left', 
-    },
-    smallTextDiv: {
-        width: '90%',
-        height: '5vh',
-        display: 'flex',     
-        alignItems: 'center',
-        justifyContent: 'left', 
-        paddingTop: '5%',
-        paddingBottom: '3%'
-    },
-    text1: {
-        fontFamily: "'Abril Fatface', cursive",
-        fontSize: '2.8vw',
-        color: '#4663C1',
-        textShadow: '-1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F'
-    },
-    text2: {
-        fontFamily: "'Abril Fatface', cursive",
-        fontSize: '2.4vw',
-        color: '#4663C1',
-        textShadow: '-1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F'
-    },
-    eventDiv: {
-        width: '75%',
-        height: '53%',
-        margin: '2% auto 0 auto',
-    },
-    image: {
-        width: '100%',
-        height: '100%'
-        
-    },
-    imageDiv: {
-        width: '95%',
-        height: '80%',
-        margin: 'auto'
-    },
-    imageText: {
-        fontSize: '2.4vw',
-        fontFamily: "'Abril Fatface', cursive",
-        color: "#4663C1",
-        textShadow: '-1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F'
-    }
-
-})
 
 export default Invite;

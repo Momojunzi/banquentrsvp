@@ -10,15 +10,15 @@ class SideTab extends Component {
         const tabText = {
             writingMode: 'vertical-rl',
             textOrientation: 'sideways',
-            fontSize: 50,
+            fontSize: '3.5vw',
             textDecoration: 'none',
             color: '#4663C1',
             fontFamily: "'Fascinate Inline', cursive",
             direction: 'rtl'
         }
         return(
-            <Link style={linkStyle} className={`side-tab ${this.props.name}`} to={`/${this.props.name}`}>                    
-                <p style={tabText}>{this.props.text}</p>
+            <Link style={linkStyle} className={`side-tab linkStyle ${this.props.name}`} to={`/${this.props.name}`}>                    
+                <p className='tabText'>{this.props.text}</p>
             </Link>   
         )
     }

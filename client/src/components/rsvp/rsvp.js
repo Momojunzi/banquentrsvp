@@ -79,7 +79,7 @@ class Rsvp extends Component {
     numberAppear = () => {
         if(this.state.rsvp.attending === true) {
             return (
-                <div className="form-group">
+                <div className="form-group text-left">
                     <label for="location-field" className={`text-left ${css(styles.labelStyle)}`}>How many guests will attend?</label>
                     <input type="text" className="form-control" id="numberOfGuests" onChange={this.getInputValues}/>
                 </div> 
@@ -94,14 +94,14 @@ class Rsvp extends Component {
         }
         if(this.state.numberOfGuests > 0){
             return(
-                <div className={css(styles.guestsStyle)}>
-                    <p className={css(styles.labelStyle)}>Who will attend?</p>
+                <div className='guestsStyle'>
+                    <p className='labelStyle'>Who will attend?</p>
                     {
                     guestList.map((guest) => {
                             return(
                                 <div key={`guest` + guest.guest +1}>
-                                    <div className="form-group">
-                                        <label className={`text-left ${css(styles.labelStyle)}`}>guest {guest.guest + 1}</label>
+                                    <div className="form-group text-left">
+                                        <label className='text-left labelStyle'>guest {guest.guest + 1}</label>
                                         <input type="text" className="form-control" onChange={this.getGuests} name={guest.guest} />
                                     </div>
                                 </div> 
@@ -139,14 +139,17 @@ const styles = StyleSheet.create({
     
     labelStyle : {
         fontFamily: "'Abril Fatface', cursive",
-        fontSize: '2.4vw',
+        fontSize: '1.75vw',
         color: '#4663C1',
         textShadow: '-1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F',
         
     },
     guestsStyle: {
-        width: '80%',
-        margin: 'auto'
+        border: 'solid #4663C1 1px',
+        padding: '2vh',
+        width: '100%',
+        margin: 'auto',
+        background: 'linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60))'
     }
     
 })

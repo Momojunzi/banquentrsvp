@@ -6,26 +6,6 @@
   
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .my-flex {
   display: flex;
   justify-content: center;
@@ -34,39 +14,42 @@
 }
 
 .container {
-  width: 70vw;
-  height: 71vh;
-  
+  /* width: 70vw;
+  height: 71vh; */
   padding: 0;
   margin: 0;
   display: flex;
-  flex-flow: row nowrap;
+  /* flex-flow: row nowrap; */
   justify-content: center;
   align-items: center;
 }
-
+ 
 .side-tab {
-  width: 8.4%;
-  height: 100%;
+  /* width: 8.4%; */
+  /* height: 100%; */
+  /* height: 71vh; */
   border: solid black 1px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-decoration: none;
 }
 
 .canvas {
-  width: 79.8%;
-  height: 100%;
-  
+  /* width: 79.8%; */
+  /* height: 100%; */
+  /* height: 71vh; */
   background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('https://res.cloudinary.com/momojunzi/image/upload/v1548896831/portfolio/rsvp/chris-brignola-392-unsplash.jpg');
   background-position: center;
   background-size: cover;
   overflow: auto;
 
 }
+/* end general css */
 
+/*side tab css*/
 .invite {
   background-color: #F8C03F;
 }
@@ -79,6 +62,57 @@
   background-color: #F58E27;
 }
 
+.linkStyle {
+  text-decoration: none;
+}
+
+.tabText {
+  text-decoration: none;
+  color: #4663C1;
+  font-family: 'Fascinate Inline', cursive;
+}
+
+/*end side tab css*/
+
+/* begin landing css */
+
+.landingTextDiv {
+  /* height: 17%;
+  width: 90%;
+  margin: 10% auto 0 auto; */
+  display: flex;
+  /* flex-flow: row nowrap; */
+  justify-content: center;
+  align-items: center;
+}
+.landingTextDiv2 {
+  height: 17%;
+  width: 90%;
+  margin: 5% auto 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.landingText {
+  font-family: 'Fascinate Inline', cursive;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+.landingDateDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landingText2 {
+  font-family: 'Fascinate Inline', cursive;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+/* end landing css */
+
+/*start of invite css*/
+
 .largeTextDiv {
   display: flex;
   flex-direction: column;
@@ -86,6 +120,106 @@
   justify-content: center;
   text-align: center;
 }
+
+.inviteTextDiv {
+  width: 44vw;
+  height: 23vh;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+.largeTextDiv {
+  width: 90%;
+  height: 7vh;
+  display: flex;      
+  align-items: center;
+  justify-content: left; 
+}
+.smallTextDiv {
+  width: 90%;
+  height: 5vh;
+  display: flex;     
+  align-items: center;
+  justify-content: left; 
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+.text1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.8vw;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+.text2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.4vw;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+.eventDiv {
+  width: 75%;
+  height: 45vh;
+  margin: 2% auto 0 auto;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  
+}
+.imageDiv {
+  width: 95%;
+  height: 33vh;
+  margin: auto;
+}
+.imageText {
+  font-size: 2.4vw;
+  font-family: 'Abril Fatface', cursive;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+
+/*end invite css */
+
+/* form style */
+.formStyle {
+  width: 80%;
+  margin: 5% auto 5% auto;
+  
+}
+.labelStyle {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.75vw;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+  text-align: left;
+}
+.h3Style {
+  font-family: 'Abril Fatface', cursive;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+  border-bottom: solid #4663C1 1px;
+  padding-bottom: 5%;
+}
+
+/*end form style */
+
+/* rsvp style */
+.labelStyle {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.75vw;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+  
+}
+.guestsStyle {
+  border: solid #4663C1 1px;
+  padding: 2vh;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60));
+}
+/* end rsvp style */
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,0 +1,58 @@
+@media (orientation: landscape) {
+    .container {
+        width: 70vw;
+        height: 71vh;
+        flex-flow: row nowrap;
+      }
+    .side-tab {
+        width: 8.4%;
+        height: 71vh;
+        flex-direction: column;
+    }
+    .canvas {
+        width: 80%;
+        /* height: 100%; */
+        height: 71vh;
+    }
+    /* end general css */
+    
+    /*side tab css*/  
+    .tabText {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        font-size: 3.5vw;
+        direction: rtl;
+      }
+    /*end side tab css*/
+    
+    /* begin landing css */
+    .landingTextDiv {
+        height: 17%;
+        width: 90%;
+        margin: 10% auto 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .landingTextDiv2 {
+        height: 17%;
+        width: 90%;
+        margin: 5% auto 0 auto;
+        flex-flow: row nowrap;
+      }
+      .landingText {
+        font-size: 4vw;
+      }
+      .landingDateDiv {
+        height: 17%;
+        width: 90%;
+        margin: 5% auto 0 auto;
+        flex-flow: row nowrap;
+      }
+      .landingText2 {
+        font-size: 5vw;
+      }
+      /* end landing css */
+
+}
