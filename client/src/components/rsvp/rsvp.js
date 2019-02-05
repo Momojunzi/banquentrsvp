@@ -80,7 +80,7 @@ class Rsvp extends Component {
         if(this.state.rsvp.attending === true) {
             return (
                 <div className="form-group text-left">
-                    <label for="location-field" className={`text-left ${css(styles.labelStyle)}`}>How many guests will attend?</label>
+                    <label for="location-field" className='text-left labelStyle'>How many guests will attend?</label>
                     <input type="text" className="form-control" id="numberOfGuests" onChange={this.getInputValues}/>
                 </div> 
             )

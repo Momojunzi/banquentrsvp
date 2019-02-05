@@ -96,5 +96,23 @@
       }
   
       /*end invite css */
+    
+      /* form style */
+
+    .formStyle {
+        width: 90%;
+        margin: 5% auto 5% auto;
+        
+      }
+      .labelStyle {
+        font-size: 4vw;
+      }
+      .h3Style {
+        font-size: 1.6em;  
+        padding-bottom: 5%;
+      }
+  
+      /*end form style */
+  
   
 }
