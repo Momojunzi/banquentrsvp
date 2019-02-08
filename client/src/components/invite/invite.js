@@ -28,7 +28,7 @@ class Invite extends Component {
     }
 
     componentDidMount() {
-        const intervalId = setInterval(this.changeImageHandler, 4000)
+        const intervalId = setInterval(this.changeImageHandler, 3000)
         this.setState({intervalId: intervalId})
     }
 
@@ -64,7 +64,7 @@ class Invite extends Component {
     render() {
         const fadeStyle = {
             opacity: this.state.opacity,
-            transition: 'opacity 3s'
+            transition: 'opacity 2s'
         }
         return(
             <div className='container'>

@@ -12,7 +12,12 @@ class Rsvp extends Component {
             locationNumber: "0522-10 Golden Gate",
             comment: '',
         },
-        guests: []
+        guests: [],
+        submitted: false
+    }
+
+    componentDidMount() {
+        this.props.returnFalse();
     }
 
     submitHandler = (event) => {
@@ -23,7 +28,19 @@ class Rsvp extends Component {
         }
         axios.post('/api/rsvp', data)
             .then(axios.post('/api/guests', data))
-            .then((response) => console.log(response))
+            .then((response) => {
+                this.setState({submitted: true})
+            })
+            .then((response) => {
+                if(this.state.rsvp.attending) {
+                    this.props.handleAttending();
+                }
+            })
+            .then((response) => {
+                if(this.state.submitted ){
+                    this.props.history.push('/submitted')
+                }
+            })
     }
 
     getInputValues = (event) => {

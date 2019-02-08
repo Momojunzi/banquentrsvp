@@ -113,6 +113,15 @@
       }
   
       /*end form style */
-  
+      .submitted-div {
+        margin-top: 20%;
+        padding: 0 2vw 0 2vw
+      }
+      .submitted-text1 {
+        font-size: 7vw
+      }
+      .submitted-text2 {
+        font-size: 5vw
+      }
   
 }

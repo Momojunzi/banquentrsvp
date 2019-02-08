@@ -193,6 +193,14 @@
 }
 /* end rsvp style */
 
+/*submitted page style */
+
+.submitted-div {
+  font-family: 'Abril Fatface', cursive;
+  color: #4663C1;
+  text-shadow: -1px 0 #F8C03F, 0 1px #F8C03F, 1px 0 #F8C03F, 0 -1px #F8C03F;
+}
+
 
 @keyframes App-logo-spin {
   from {

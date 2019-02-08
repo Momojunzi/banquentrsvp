@@ -11,7 +11,7 @@ const RsvpForm = (props) => {
                 <label for="location" className='text-left labelStyle'>Location</label>
                 <Locations locationHandler={props.locationHandler}/>
             </div>
-            <div class="form-group text-left">
+            <div className="form-group text-left">
                 <label for="exampleSelect1" className='text-left labelStyle'>Will you be attending?</label>
                 <select className="form-control" id="exampleSelect1" onClick={props.attendingHandler}>
                     <option >Yes</option>
