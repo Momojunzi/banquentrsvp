@@ -8,6 +8,7 @@ import Landing from './components/landing/landing';
 import Invite from './components/invite/invite';
 import Directions from './components/directions/directions';
 import Submitted from './components/submitted/submitted';
+import Admin from './components/admin/admin';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
               <Route path="/rsvp" render={(props) => <Rsvp {...props} name='rsvp' handleAttending={this.handleAttending} returnFalse={this.returnFalse}/>}/>
               <Route path="/submitted" render={(props) => <Submitted {...props} name='submitted' attending={this.state.attending} />}/>
               <Route path="/directions" render={(props) => <Directions {...props} name='directions' />}/>
+              <Route path="/admin" render={(props) => <Admin {...props} name='admin' />}/>
             </div>
           </Switch>
         </Router>
