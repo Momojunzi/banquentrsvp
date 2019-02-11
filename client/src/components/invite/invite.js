@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import SideTab from '../../components/sideTab/sideTab';
-import {StyleSheet, css} from 'aphrodite'
+import {StyleSheet, css} from 'aphrodite';
+const casino = "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1548896832/portfolio/rsvp/jonathan-petersson-614702-unsplash.jpg"
+const dinner = "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1548896833/portfolio/rsvp/rawpixel-754045-unsplash.jpg"
+const awards = "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1549147819/portfolio/rsvp/ariel-besagar-497034-unsplash.jpg"
+
 
 const imageData = [
     {
         text: "Casino Games",
-        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,h_1080,w_1920/v1548896832/portfolio/rsvp/jonathan-petersson-614702-unsplash.jpg"
+        image: casino
     },
     {
         text: "Dinner",
-        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,h_1080,w_1920/v1548896833/portfolio/rsvp/rawpixel-754045-unsplash.jpg"
+        image: dinner
     },
     {
         text: "Awards",
-        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,w_1920/v1549147819/portfolio/rsvp/ariel-besagar-497034-unsplash.jpg"
+        image: awards
     },
 ] 
 
