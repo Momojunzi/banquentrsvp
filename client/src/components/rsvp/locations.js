@@ -1,6 +1,7 @@
 import React from 'react';
 
 const locationData = [
+    {},
     {
         locationNumber: "0522-10",
         name:'Golden Gate'   
@@ -111,6 +112,7 @@ const locationData = [
 const Locations = (props) => {
     return(
         <select className="form-control" id="location" onChange={props.locationHandler} >
+            <option value="" disabled selected>Please choose your location</option>
             {locationData.map( location => {
                 return(
                     <option>{location.locationNumber} {location.name}</option>

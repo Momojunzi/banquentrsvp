@@ -48,10 +48,11 @@ module.exports = {
             })   
     },
     getRsvp: function(req, res) {
-        db.Rsvp
+        Guest.Guest
           .find()
           .then(dbRsvp => {
-              res.json(dbRsvp)
+              console.log(dbrsvp);
+              res.json(dbRsvp);
           })
     }
     

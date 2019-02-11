@@ -3,17 +3,22 @@ import RsvpForm from './rsvpForm';
 import axios from 'axios';
 import SideTab from '../../components/sideTab/sideTab';
 import {StyleSheet, css} from 'aphrodite';
+import Locations from './locations';
+
 
 class Rsvp extends Component {
     state ={
         numberOfGuests: 0,
         rsvp: {
-            attending: true,
+            attending: false,
             locationNumber: "0522-10 Golden Gate",
             comment: '',
         },
         guests: [],
-        submitted: false
+        submitted: false,
+        locationed: false,
+        attended: false,
+        finaled: false
     }
 
     componentDidMount() {
@@ -71,7 +76,14 @@ class Rsvp extends Component {
             ...this.state.rsvp,
             attending}
         }, ()=>{
-            elem.checked = true;
+            elem.checked = true; 
+            if(this.state.attending === false) {
+                this.setState({finaled: true})
+            }
+                     
+        })
+        this.setState({attended: true}, ()=> {
+           // this.setState({finaled:true})
         }) 
     } 
 
@@ -79,7 +91,8 @@ class Rsvp extends Component {
         event.preventDefault();
         const elem = event.target;
         const location = {locationNumber: elem.value}
-        this.setState(location);
+        this.setState(location)
+        this.setState({locationed: true})
     }
 
     getGuests = (event) => {
@@ -90,14 +103,20 @@ class Rsvp extends Component {
         guests[guestNum] = inpValue;
         console.log(guests[guestNum])
         console.log(guests);
-        this.setState({guests: guests}, () =>{console.log("state guests",  this.state.guests)})
+        this.setState({guests: guests}, () =>{
+            console.log("state guests",  this.state.guests)
+            if(this.state.finaled === false) {
+                this.setState({finaled: true})
+            }
+        })
+        
     }
 
     numberAppear = () => {
         if(this.state.rsvp.attending === true) {
             return (
                 <div className="form-group text-left">
-                    <label for="location-field" className='text-left labelStyle'>How many guests will attend?</label>
+                    <label htmlFor="location-field" className='text-left labelStyle'>How many guests will attend?</label>
                     <input type="text" className="form-control" id="numberOfGuests" onChange={this.getInputValues}/>
                 </div> 
             )
@@ -110,6 +129,7 @@ class Rsvp extends Component {
             guestList.push({guest: i})
         }
         if(this.state.numberOfGuests > 0){
+            
             return(
                 <div className='guestsStyle'>
                     <p className='labelStyle'>Who will attend?</p>
@@ -130,6 +150,35 @@ class Rsvp extends Component {
         }    
     }
 
+    renderAttending = () => {
+        if(this.state.locationed){
+            return (
+                <div className="form-group text-left">
+                    <label htmlFor="exampleSelect1" className='text-left labelStyle'>Will you be attending?</label>
+                    <select className="form-control" id="exampleSelect1" onClick={this.attendingHandler} >
+                        <option value="" disabled selected>Please choose yes or no</option>
+                        <option>Yes</option>
+                        <option >No</option>
+                    </select>
+                </div>
+            )
+        }
+    }
+
+    renderCommentAndSubmit = () => {
+        if(this.state.finaled){
+           return (
+                <div>
+                    <div className="form-group text-left">
+                        <label htmlFor="comment" className='text-left labelStyle'>Do you have any comments?</label>
+                        <textarea className="form-control" id="comment" rows="4" onChange={this.getInputValues}/>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </div>
+            ) 
+        } 
+    }
+
     render() {
         return(
             <div className='container'>
@@ -144,6 +193,8 @@ class Rsvp extends Component {
                         submitHandler={this.submitHandler}
                         locationHandler={this.locationHandler}
                         addGuests={this.addGuests}
+                        renderAttending={this.renderAttending}
+                        renderCommentAndSubmit={this.renderCommentAndSubmit}
                     />
                 </div>
                 <SideTab  name='directions' text='Directions'/>
