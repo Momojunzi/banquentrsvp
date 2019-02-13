@@ -3,10 +3,6 @@ import SideTab from '../../components/sideTab/sideTab';
 
 class Directions extends Component {
     render() {
-
-        const mapStyle = {
-            border: 0
-        }
         return(
             <div className='container'>
                 <SideTab  name='invite' text='The Event'/>
@@ -17,7 +13,6 @@ class Directions extends Component {
                     width="100%" 
                     height="100%" 
                     frameborder="0" 
-                    style={mapStyle} 
                     src="https://www.google.com/maps/embed/v1/place?q=32083%20Alvarado-Niles%20Rd%2C%20Union%20City%2C%20CA%2094587&key=AIzaSyAnQTPhx6nkRVy0maCdtgLOIsfPQLHru9k" 
                     allowfullscreen>
 

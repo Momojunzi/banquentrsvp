@@ -9,6 +9,7 @@ const rsvpSchema = mongoose.Schema({
     //     type: Schema.Types.ObjectId,
     //     ref: 'Guest'
     // }]
+    noShows: []
 }, {collection: "Rsvp"});
 
 const Rsvp = mongoose.model("Rsvp", rsvpSchema);

@@ -111,7 +111,7 @@ const locationData = [
 
 const Locations = (props) => {
     return(
-        <select className="form-control" id="location" onChange={props.locationHandler} >
+        <select className="form-control" id="location" onChange={props.locationHandler}>
             <option value="" disabled selected>Please choose your location</option>
             {locationData.map( location => {
                 return(

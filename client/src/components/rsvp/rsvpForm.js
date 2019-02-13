@@ -22,6 +22,7 @@ const RsvpForm = (props) => {
             </div> */}
            {props.numberAppear()}
            {props.addGuests()}
+           {props.renderNoShow()}
            {props.renderCommentAndSubmit()}
            {/* <div className="form-group text-left">
                 <label htmlFor="comment" className='text-left labelStyle'>Do you have any comments?</label>

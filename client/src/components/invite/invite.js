@@ -10,17 +10,18 @@ const awards = "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h
 const imageData = [
     {
         text: "Casino Games",
-        image: casino
+        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1548896832/portfolio/rsvp/jonathan-petersson-614702-unsplash.jpg"
     },
     {
         text: "Dinner",
-        image: dinner
+        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1548896833/portfolio/rsvp/rawpixel-754045-unsplash.jpg"
     },
     {
         text: "Awards",
-        image: awards
+        image: "https://res.cloudinary.com/momojunzi/image/upload/c_scale,q_24,h_1080,w_1920/v1549147819/portfolio/rsvp/ariel-besagar-497034-unsplash.jpg"
     },
 ] 
+
 
 
 class Invite extends Component {
@@ -28,16 +29,31 @@ class Invite extends Component {
     state = {
         count: 0, 
         opacity: 1,
-        shown: true
+        shown: true,
+        imageArr: []
     }
 
     componentDidMount() {
+        this.preloader(imageData);
         const intervalId = setInterval(this.changeImageHandler, 3000)
         this.setState({intervalId: intervalId})
     }
 
     componentWillUnmount() {
         clearInterval(this.state.intervalId);
+
+    }
+
+    preloader = (arr) => {
+        const imageArr = []
+        arr.forEach(entry => {
+            const img = new Image();
+            img.src = entry.image
+            imageArr.push(img);
+            this.setState({imageArr:
+                [...this.state.imageArr, img]
+            })
+        })
     }
 
     changeImageHandler = () => {
@@ -87,7 +103,7 @@ class Invite extends Component {
                     </div>
                     <div className='eventDiv' style={fadeStyle}>
                         <p className='imageText'>{imageData[this.state.count].text}</p>
-                        <div className='imageDiv'>
+                        <div className='imageDiv' >
                             <img src={imageData[this.state.count].image} className='image' alt="invite"/>
                         </div>
                     </div>

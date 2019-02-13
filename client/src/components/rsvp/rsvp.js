@@ -13,12 +13,14 @@ class Rsvp extends Component {
             attending: false,
             locationNumber: "0522-10 Golden Gate",
             comment: '',
+            noShows: ''
         },
         guests: [],
         submitted: false,
         locationed: false,
         attended: false,
-        finaled: false
+        finaled: false,
+        noShowed: false,
     }
 
     componentDidMount() {
@@ -61,8 +63,6 @@ class Rsvp extends Component {
                 ...this.state.rsvp,
                 [name]:inputValue
             }
-        }, ()=>{
-            console.log(this.state.rsvp);
         })
     }
 
@@ -70,28 +70,29 @@ class Rsvp extends Component {
         event.preventDefault();
         const elem = event.target;
         const radioValue = elem.value;
-        const attending = (radioValue === "Yes");
-        
+        let attending;
+        if (elem.value === 'Yes') attending = true;
+        else attending = false;
         this.setState({rsvp:{
             ...this.state.rsvp,
             attending}
         }, ()=>{
             elem.checked = true; 
-            if(this.state.attending === false) {
-                this.setState({finaled: true})
-            }
-                     
+            if(this.state.rsvp.attending === false) {
+                this.setState({noShowed: true})
+            } else this.setState({noShowed: false})                  
         })
-        this.setState({attended: true}, ()=> {
-           // this.setState({finaled:true})
-        }) 
+        this.setState({attended: true}) 
     } 
 
     locationHandler = (event) => {
         event.preventDefault();
         const elem = event.target;
-        const location = {locationNumber: elem.value}
-        this.setState(location)
+        const location = elem.value
+        this.setState({rsvp: {
+            ...this.state.rsvp,
+           locationNumber: location
+        }})
         this.setState({locationed: true})
     }
 
@@ -101,10 +102,21 @@ class Rsvp extends Component {
         const guests = this.state.guests;
         let inpValue = event.target.value;
         guests[guestNum] = inpValue;
-        console.log(guests[guestNum])
-        console.log(guests);
         this.setState({guests: guests}, () =>{
-            console.log("state guests",  this.state.guests)
+            if(this.state.finaled === false) {
+                this.setState({finaled: true})
+            }
+        })
+        
+    }
+
+    getNoShow = (event) => {
+        event.preventDefault();
+        let inpValue = event.target.value;
+        this.setState({rsvp: {
+            ...this.state.rsvp,
+            noShows: inpValue
+        }},() => {
             if(this.state.finaled === false) {
                 this.setState({finaled: true})
             }
@@ -158,7 +170,7 @@ class Rsvp extends Component {
                     <select className="form-control" id="exampleSelect1" onClick={this.attendingHandler} >
                         <option value="" disabled selected>Please choose yes or no</option>
                         <option>Yes</option>
-                        <option >No</option>
+                        <option>No</option>
                     </select>
                 </div>
             )
@@ -179,6 +191,19 @@ class Rsvp extends Component {
         } 
     }
 
+    renderNoShow = () => {
+        if(this.state.noShowed) {
+            return(
+                <div>
+                    <div className="form-group text-left">
+                        <label htmlFor="comment" className='text-left labelStyle'>Please leave your name</label>
+                        <input type="text" className="form-control" onChange={this.getNoShow} />
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render() {
         return(
             <div className='container'>
@@ -195,6 +220,7 @@ class Rsvp extends Component {
                         addGuests={this.addGuests}
                         renderAttending={this.renderAttending}
                         renderCommentAndSubmit={this.renderCommentAndSubmit}
+                        renderNoShow={this.renderNoShow}
                     />
                 </div>
                 <SideTab  name='directions' text='Directions'/>
